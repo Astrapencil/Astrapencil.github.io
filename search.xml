@@ -5,54 +5,52 @@
     <url>/2023/06/17/Hexo%E5%BB%BA%E7%AB%99%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97/</url>
     <content><![CDATA[<p>也算是照着文档一步步来，然后就会出现很多意料之外的坑，每报一次ERROR心就凉半截</p>
 <p>得！又是新的折腾！</p>
-<h2 id="网络问题">网络问题</h2>
-<h3 id="cnpm的安装"><code>cnpm</code>的安装</h3>
-<p><code>npm</code>(Node Package Manager)是<code>node</code>包的管理工具。而<code>cnpm</code>是阿里巴巴做的一个完整的<code>npmjs.org</code>镜像（淘宝镜像），可以用它代替官方版本，国内访问速度很快。</p>
+<h2 id="网络问题"><a class="markdownIt-Anchor" href="#网络问题"></a> 网络问题</h2>
+<h3 id="cnpm的安装"><a class="markdownIt-Anchor" href="#cnpm的安装"></a> <code>cnpm</code>的安装</h3>
+<p><code>npm</code>(Node Package Manager)是<code>node</code>包的管理工具。<br>
+而<code>cnpm</code>是阿里巴巴做的一个完整的<code>npmjs.org</code>镜像（淘宝镜像），可以用它代替官方版本，国内访问速度很快。</p>
 <p>只需要在<code>cmd</code>或<code>Git Bash</code>中输入</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure></div>
 <p><code>Enter</code>即可！</p>
-<p>以后所有的<code>npm</code>命令都可以换成<code>cnpm</code>命令！<s>妈妈再也不用担心我下不到依赖力</s></p>
-<h3 id="Where-is-my-Git-Bash-Here？">Where is my <code>Git Bash Here</code>？</h3>
+<p>以后所有的<code>npm</code>命令都可以换成<code>cnpm</code>命令！<br>
+<s>妈妈再也不用担心我下不到依赖力</s></p>
+<h3 id="where-is-my-git-bash-here"><a class="markdownIt-Anchor" href="#where-is-my-git-bash-here"></a> Where is my <code>Git Bash Here</code>？</h3>
 <p>Git是以前想玩AI绘图的时候装的，我平时也不编程，<code>Git Bash Here</code>感觉放在右键菜单里没什么用，于是就，，删掉了。</p>
 <p>看网上说还有原因就是没有把Git装在C盘。</p>
 <p>其实只要会搜索也不复杂，附教程一篇：<a class="link" href="https://blog.csdn.net/qq_41019529/article/details/110139830">鼠标右键没有git bash here，右键添加git bash here并增加图标</a></p>
-<h3 id="初始化">初始化</h3>
+<h3 id="初始化"><a class="markdownIt-Anchor" href="#初始化"></a> 初始化</h3>
 <p>在进行初始化的时候，会用到</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure></div>
 <p>因为网络问题，等了很久，文件夹里并没有出现亲爱的<code>node_modules</code>文件夹。</p>
 <p>此时<s>正确</s>节省时间的方法是</p>
 <ol>
-<li class="lvl-3">
-<p><code>Ctrl+C</code>结束下载</p>
-</li>
-<li class="lvl-3">
-<p>使用万能的<code>cnpm</code>输入</p>
-</li>
+<li><code>Ctrl+C</code>结束下载</li>
+<li>使用万能的<code>cnpm</code>输入</li>
 </ol>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cnpm install</span><br></pre></td></tr></table></figure></div>
 <p>然后文件夹里就会单独安装一个<code>node_modules</code>模块。</p>
 <p>但是！我亲爱的破网，下载的<code>node_modules</code>，是……不全的。不过好在，它把根目录下<code>\node_modules\.store</code>下全了。</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="Hexo%E5%BB%BA%E7%AB%99%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97%5CSnipasteScreenShot%5B.store%5D.png" alt="SnipasteScreenShot[.store]"></p>
+<p><img lazyload src="/images/loading.svg" data-src="Hexo%E5%BB%BA%E7%AB%99%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97/SnipasteScreenShot0.png" alt="SnipasteScreenShot[.store]"></p>
 <p>如果需要安装npm包，那么<strong>务必去翻这个<code>\.store</code>去找到相应包的版本号！</strong>（即图中划红线部分）<br>然后用</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cnpm i xxxx@xx.xx.xx</span><br></pre></td></tr></table></figure></div>
 <p>进行安装，“@”后面为版本号。</p>
-<p>而如果遇到蓝色框中的情况，则推荐用<strong>最旧的</strong>版本~~，反正能用就行~~。</p>
+<p>而如果遇到蓝色框中的情况，则推荐用<strong>最旧的</strong>版本~~，反正能用就行~~ 。</p>
 <p>如果真的真的没有（我还没有遇到过），那么就<b>用好搜索引擎</b>，在<a class="link" href="https://www.npmjs.com/">npm官网</a>找到对应的包，然后找<b>下载数最多的版本</b>安装！</p>
-<p>![SnipasteScreenShot[timed-out - npm]](Hexo建站踩坑日志\SnipasteScreenShot[timed-out - npm].png)</p>
-<h3 id="报错！！！">报错！！！</h3>
+<p><img lazyload src="/images/loading.svg" data-src="Hexo%E5%BB%BA%E7%AB%99%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97/SnipasteScreenShot1.png" alt="SnipasteScreenShot[timed-out - npm]"></p>
+<h3 id="报错"><a class="markdownIt-Anchor" href="#报错"></a> 报错！！！</h3>
 <p><em>诀窍：认真去看ERROR后面到底跟着些什么东西+会用搜索引擎。</em></p>
-<h4 id="Error-cannot-find-module-xxxx"><code>Error: cannot find module'xxxx'</code></h4>
+<h4 id="error-cannot-find-modulexxxx"><a class="markdownIt-Anchor" href="#error-cannot-find-modulexxxx"></a> <code>Error: cannot find module'xxxx'</code></h4>
 <p>node.js版本18.16.0，在更换主题时，首先遇到了这个报错。</p>
 <p>一眼顶针，<code>node_modules</code>缺包。</p>
 <p>那就<code>Git Bash</code>输：</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cnpm i xxxx</span><br></pre></td></tr></table></figure></div>
 <p>原则：缺啥装啥。如果不想遇到下面的报错，那就好好去翻<code>\.store</code>找版本号（见上节）。</p>
-<h4 id="require-of-ES-Module"><code>require() of ES Module</code></h4>
+<h4 id="require-of-es-module"><a class="markdownIt-Anchor" href="#require-of-es-module"></a> <code>require() of ES Module</code></h4>
 <p>首先上原文</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cnpm install hexo-all-minifier</span><br><span class="line">&gt; hexo-all-minifier@0.5.7 › imagemin-mozjpeg@9.0.0 › mozjpeg@^7.0.0 postinstall D:\Hexo\node_modules\.store\mozjpeg@7.1.1\node_modules\mozjpeg</span><br><span class="line">&gt; node lib/install.js</span><br><span class="line">D:\Hexo\node_modules\.store\decompress-tarbz2@4.1.1\node_modules\decompress-tarbz2\index.js:3</span><br><span class="line">const fileType = require('file-type');</span><br><span class="line">                 ^</span><br><span class="line"></span><br><span class="line">Error [ERR_REQUIRE_ESM]: require() of ES Module D:\Hexo\node_modules\.store\file-type@18.4.0\node_modules\file-type\index.js from D:\Hexo\node_modules\.store\decompress-tarbz2@4.1.1\node_modules\decompress-tarbz2\index.js not supported.</span><br><span class="line">Instead change the require of D:\Hexo\node_modules\.store\file-type@18.4.0\node_modules\file-type\index.js in D:\Hexo\node_modules\.store\decompress-tarbz2@4.1.1\node_modules\decompress-tarbz2\index.js to a dynamic import() which is available in all CommonJS modules.</span><br><span class="line">    at Object.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\decompress-tarbz2@4.1.1\node_modules\decompress-tarbz2\index.js:3:18)</span><br><span class="line">    at Object.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\decompress@4.2.1\node_modules\decompress\index.js:5:26)</span><br><span class="line">    at Object.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\bin-build@3.0.0\node_modules\bin-build\index.js:2:20)</span><br><span class="line">    at Object.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\mozjpeg@7.1.1\node_modules\mozjpeg\lib\install.js:4:18) {</span><br><span class="line">  code: 'ERR_REQUIRE_ESM'</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
 <p>摘取重点可以看出，报错的中心在于第八行，新加入的插件（由报错看，是<code>file-type</code>的18.4.0版本）与原软件在规范（CommonJs/ES）的处理上起了冲突。</p>
 <p>就是npm包<code>@latest</code>版本的锅！好好去翻<code>\.store</code>。</p>
-<h2 id="写在后面">写在后面</h2>
+<h2 id="写在后面"><a class="markdownIt-Anchor" href="#写在后面"></a> 写在后面</h2>
 <p>搭建这个博客，也是跟着文档一步一步走，跟着知乎上的教程一步步来的。但是，毕竟每个人的网络不一样，每个人的设备也不一样，遇到的问题也会是千奇百怪的。</p>
 <p>以上遇到的问题，有的有些教程提到了，有的却连搜索引擎都找不到结果。实在是本人资源匮乏，真要去翻Issue可以翻个天长地久，只能一步一步，跟着经验和知乎、博客园、CSDN上零碎的只言片语慢慢来。</p>
 <p>我其实并不会编程，而且因为学业的关系，前前后后花了近两个月，才把博客基本调教好。</p>
@@ -63,30 +61,33 @@
   <entry>
     <title>Hello World</title>
     <url>/2023/05/14/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo</a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting</a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub</a>.</p>
-<h2 id="Quick-Start">Quick Start</h2>
-<h3 id="Create-a-new-post">Create a new post</h3>
+    <content><![CDATA[<p>Welcome to <a class="link" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a class="link" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a class="link" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2>
+<h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3>
 <div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing</a></p>
-<h3 id="Run-server">Run server</h3>
+<p>More info: <a class="link" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3>
 <div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server</a></p>
-<h3 id="Generate-static-files">Generate static files</h3>
+<p>More info: <a class="link" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3>
 <div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating</a></p>
-<h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3>
+<p>More info: <a class="link" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites"></a> Deploy to remote sites</h3>
 <div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment</a></p>
+<p>More info: <a class="link" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
   <entry>
     <title>流萤与星空</title>
     <url>/2023/06/04/%E6%B5%81%E8%90%A4%E4%B8%8E%E6%98%9F%E7%A9%BA/</url>
-    <content><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1426611455&auto=0&height=66"></iframe>
-<p>流萤是明灭迷离、天真奇丽的憧憬尘埃是虚无纷飞，终将落地的厚重<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
-<p>腐草为萤也 飞萤缀于地流光为星也 群星饰于天</p>
+    <content><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1426611455&auto=0&height=66"></iframe>
+<p>流萤是明灭迷离、天真奇丽的憧憬<br>
+尘埃是虚无纷飞，终将落地的厚重<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<p>腐草为萤也 飞萤缀于地<br>
+流光为星也 群星饰于天</p>
 <p>星空什么也不代表，但它代表了一切浪漫与憧憬。</p>
-<p>若是来人能漫步于群星之间，他们的胸膛会灼热吗？如果古人尝试触摸星穹一角，他们的眼睛会闪烁吗？</p>
+<p>若是来人能漫步于群星之间，他们的胸膛会灼热吗？<br>
+如果古人尝试触摸星穹一角，他们的眼睛会闪烁吗？</p>
 <p>流萤自于地上的尘埃，群星成于宇宙的尘埃</p>
 <p>浮游的流萤，飘散的群星</p>
 <p>星星是漫游者的灯塔</p>
