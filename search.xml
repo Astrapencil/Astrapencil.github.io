@@ -4,91 +4,87 @@
     <title>Hello World</title>
     <url>/2023/05/14/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a class="link" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a class="link" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a class="link" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2>
-<h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
 <p>More info: <a class="link" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
 <p>More info: <a class="link" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
 <p>More info: <a class="link" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites"></a> Deploy to remote sites</h3>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
 <p>More info: <a class="link" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
   <entry>
     <title>Hexo建站踩坑日志</title>
     <url>/2023/06/17/Hexo%E5%BB%BA%E7%AB%99%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97/</url>
-    <content><![CDATA[<p>也算是照着文档一步步来，然后就会出现很多意料之外的坑。</p>
-<p>又是新的折腾……</p>
-<h2 id="网络问题"><a class="markdownIt-Anchor" href="#网络问题"></a> 网络问题</h2>
-<h3 id="cnpm的安装"><a class="markdownIt-Anchor" href="#cnpm的安装"></a> <code>cnpm</code>的安装</h3>
-<p><code>npm</code>(Node Package Manager)是<code>node</code>包的管理工具。<br>
-而<code>cnpm</code>是阿里巴巴做的一个完整的<code>npmjs.org</code>镜像（淘宝镜像），可以用它代替官方版本，国内访问速度很快。</p>
-<p>只需要在<code>cmd</code>或<code>Git Bash</code>中输入</p>
+    <content><![CDATA[<p>前些日子看到了本年级5班搭建的“班级主页”（现在是Cloudreve页面不知道为什么），心血来潮想自己搞自己的博客。搜了<a class="link" href="https://hexo.io/zh-cn/docs/">HEXO官方文档</a>、<a class="link" href="https://zhuanlan.zhihu.com/p/547520780">知乎的教程</a>（我觉得写得最好的一篇），却还愣是栽进不明所以的大坑里去。</p>
+<p>一番折腾，再折腾，终于从大坑里边爬出来，开始填小坑了。</p>
+<h2 id="网络问题"><a href="#网络问题" class="headerlink" title="网络问题"></a>网络问题</h2><h3 id="cnpm的安装"><a href="#cnpm的安装" class="headerlink" title="cnpm的安装"></a><code>cnpm</code>的安装</h3><p><code>npm</code>(Node Package Manager)是<code>node</code>包的管理工具。<br>而<code>cnpm</code>是阿里巴巴做的一个完整的<code>npmjs.org</code>镜像（淘宝镜像），可以用它代替官方版本，国内访问速度很快。</p>
+<p>只需要在<code>cmd</code>或鼠标右键再点<code>Git Bash</code>中输入</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure></div>
 <p><code>Enter</code>即可！</p>
-<p>以后所有的<code>npm</code>命令都可以换成<code>cnpm</code>命令！<br>
-<s>妈妈再也不用担心我下不到依赖力</s></p>
-<h3 id="where-is-my-git-bash-here"><a class="markdownIt-Anchor" href="#where-is-my-git-bash-here"></a> Where is my <code>Git Bash Here</code>？</h3>
-<p>Git是以前想玩AI绘图的时候装的，我平时也不编程，<code>Git Bash Here</code>感觉放在右键菜单里没什么用，于是就，，删掉了。</p>
+<p>以后所有的<code>npm</code>命令都可以换成<code>cnpm</code>命令！<br><del>妈妈再也不用担心我下不到依赖力</del></p>
+<h3 id="Where-is-my-Git-Bash-Here？"><a href="#Where-is-my-Git-Bash-Here？" class="headerlink" title="Where is my Git Bash Here？"></a>Where is my <code>Git Bash Here</code>？</h3><p>Git是以前想玩AI绘图的时候装的，我平时也不编程，<code>Git Bash Here</code>感觉放在右键菜单里没什么用，于是就，，删掉了。</p>
 <p>看网上说还有原因就是没有把Git装在C盘。</p>
 <p>其实只要会搜索也不复杂，附教程一篇：<a class="link" href="https://blog.csdn.net/qq_41019529/article/details/110139830">鼠标右键没有git bash here，右键添加git bash here并增加图标</a></p>
-<h3 id="初始化"><a class="markdownIt-Anchor" href="#初始化"></a> 初始化</h3>
-<p>在进行初始化的时候，会用到</p>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>在进行初始化的时候，会用到</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure></div>
 <p>因为网络问题，等了很久，文件夹里并没有出现亲爱的<code>node_modules</code>文件夹。</p>
-<p>此时<s>正确</s>节省时间的方法是</p>
+<p>此时<del>正确</del>节省时间的方法是</p>
 <ol>
 <li><code>Ctrl+C</code>结束下载</li>
-<li>使用万能的<code>cnpm</code>输入</li>
+<li>使用万能的<code>cnpm</code>输入<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cnpm install</span><br></pre></td></tr></table></figure></div>
+然后文件夹里就会单独安装一个<code>node_modules</code>模块。</li>
 </ol>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cnpm install</span><br></pre></td></tr></table></figure></div>
-<p>然后文件夹里就会单独安装一个<code>node_modules</code>模块。</p>
 <p>但是！我亲爱的破网，下载的<code>node_modules</code>，是……不全的。不过好在，它把根目录下<code>\node_modules\.store</code>下全了。</p>
-<p><img lazyload src="/images/loading.svg" data-src="SnipasteScreenShot0.png" alt="SnipasteScreenShot[.store]"></p>
+<p><img lazyload src="/images/loading.svg" data-src="/2023/06/17/Hexo%E5%BB%BA%E7%AB%99%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97/SnipasteScreenShot0.png" alt="SnipasteScreenShot[.store]"></p>
 <p>如果需要安装npm包，那么<strong>务必去翻这个<code>\.store</code>去找到相应包的版本号！</strong>（即图中划红线部分）<br>然后用</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cnpm i xxxx@xx.xx.xx</span><br></pre></td></tr></table></figure></div>
+
 <p>进行安装，“@”后面为版本号。</p>
 <p>而如果遇到蓝色框中的情况，则推荐用<strong>最旧的</strong>版本<del>，反正能用就行</del>。</p>
 <p>如果真的真的没有（我还没有遇到过），那么就<b>用好搜索引擎</b>，在<a class="link" href="https://www.npmjs.com/">npm官网</a>找到对应的包，然后找<b>下载数最多的版本</b>安装！</p>
-<p><img lazyload src="/images/loading.svg" data-src="SnipasteScreenShot1.png" alt="一个名为timed-out的npm包的官网页面"></p>
-<h2 id="报错情况"><a class="markdownIt-Anchor" href="#报错情况"></a> 报错情况</h2>
-<p><em>诀窍：认真去看ERROR后面到底跟着些什么东西+会用搜索引擎。</em></p>
-<h4 id="error-cannot-find-modulexxxx"><a class="markdownIt-Anchor" href="#error-cannot-find-modulexxxx"></a> <code>Error: cannot find module'xxxx'</code></h4>
-<p>node.js版本18.16.0，在更换主题时，首先遇到了这个报错。</p>
+<p><img lazyload src="/images/loading.svg" data-src="/2023/06/17/Hexo%E5%BB%BA%E7%AB%99%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97/SnipasteScreenShot1.png" alt="一个名为timed-out的npm包的官网页面"></p>
+<h2 id="报错情况"><a href="#报错情况" class="headerlink" title="报错情况"></a>报错情况</h2><p><em>诀窍：认真去看ERROR后面到底跟着些什么东西+会用搜索引擎。</em></p>
+<h4 id="Error-cannot-find-module-39-xxxx-39"><a href="#Error-cannot-find-module-39-xxxx-39" class="headerlink" title="Error: cannot find module&#39;xxxx&#39;"></a><code>Error: cannot find module&#39;xxxx&#39;</code></h4><p>node.js版本18.16.0，在更换主题时，首先遇到了这个报错。</p>
 <p>一眼顶针，<code>node_modules</code>缺包。</p>
 <p>那就<code>Git Bash</code>输：</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cnpm i xxxx</span><br></pre></td></tr></table></figure></div>
+
 <p>原则：缺啥装啥。如果不想遇到下面的报错，那就好好去翻<code>\.store</code>找版本号（见上节）。</p>
-<h4 id="require-of-es-module"><a class="markdownIt-Anchor" href="#require-of-es-module"></a> <code>require() of ES Module</code></h4>
-<p>首先上原文</p>
+<h4 id="require-of-ES-Module"><a href="#require-of-ES-Module" class="headerlink" title="require() of ES Module"></a><code>require() of ES Module</code></h4><p>首先上原文</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cnpm install hexo-all-minifier</span><br><span class="line">&gt; hexo-all-minifier@0.5.7 › imagemin-mozjpeg@9.0.0 › mozjpeg@^7.0.0 postinstall D:\Hexo\node_modules\.store\mozjpeg@7.1.1\node_modules\mozjpeg</span><br><span class="line">&gt; node lib/install.js</span><br><span class="line">D:\Hexo\node_modules\.store\decompress-tarbz2@4.1.1\node_modules\decompress-tarbz2\index.js:3</span><br><span class="line">const fileType = require(&#x27;file-type&#x27;);</span><br><span class="line">                 ^</span><br><span class="line"></span><br><span class="line">Error [ERR_REQUIRE_ESM]: require() of ES Module D:\Hexo\node_modules\.store\file-type@18.4.0\node_modules\file-type\index.js from D:\Hexo\node_modules\.store\decompress-tarbz2@4.1.1\node_modules\decompress-tarbz2\index.js not supported.</span><br><span class="line">Instead change the require of D:\Hexo\node_modules\.store\file-type@18.4.0\node_modules\file-type\index.js in D:\Hexo\node_modules\.store\decompress-tarbz2@4.1.1\node_modules\decompress-tarbz2\index.js to a dynamic import() which is available in all CommonJS modules.</span><br><span class="line">    at Object.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\decompress-tarbz2@4.1.1\node_modules\decompress-tarbz2\index.js:3:18)</span><br><span class="line">    at Object.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\decompress@4.2.1\node_modules\decompress\index.js:5:26)</span><br><span class="line">    at Object.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\bin-build@3.0.0\node_modules\bin-build\index.js:2:20)</span><br><span class="line">    at Object.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\mozjpeg@7.1.1\node_modules\mozjpeg\lib\install.js:4:18) &#123;</span><br><span class="line">  code: &#x27;ERR_REQUIRE_ESM&#x27;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<p>摘取重点可以看出，报错的中心在于第八行，新加入的插件（由报错看，是<code>file-type</code>的18.4.0版本）与原软件在规范（CommonJs/ES）的处理上起了冲突。</p>
+<p>摘取重点可以看出，报错的中心在于第八行，新加入的插件（由报错看，是<code>file-type</code>的18.4.0版本）与原软件在规范（CommonJs&#x2F;ES）的处理上起了冲突。</p>
 <p>就是npm包<code>@latest</code>版本的锅！好好去翻<code>\.store</code>。</p>
-<h4 id="非法字符"><a class="markdownIt-Anchor" href="#非法字符"></a> 非法字符</h4>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cnpm i @iktakahiro+markdown-it-katex@4.0.1</span><br><span class="line">C:\Users\Admin\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\lib\npa.js:17</span><br><span class="line">    throw newError;</span><br><span class="line">    ^</span><br><span class="line"></span><br><span class="line">Error: Invalid package name &quot;@iktakahiro+markdown-it-katex&quot;: name can only contain URL-friendly characters package: root › @iktakahiro+markdown-it-katex@4.0.1</span><br><span class="line">    at npa (C:\Users\HP\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\lib\npa.js:15:22)</span><br><span class="line">    at exports.parsePackageName (C:\Users\HP\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\lib\alias.js:4:13)</span><br><span class="line">    at Object.&lt;anonymous&gt; (C:\Users\HP\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\bin\install.js:165:7)</span><br><span class="line">    at Module._compile (node:internal/modules/cjs/loader:1254:14)</span><br><span class="line">    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)</span><br><span class="line">    at Module.load (node:internal/modules/cjs/loader:1117:32)</span><br><span class="line">    at Module._load (node:internal/modules/cjs/loader:958:12)</span><br><span class="line">    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)</span><br><span class="line">    at node:internal/main/run_main_module:23:47 &#123;</span><br><span class="line">  code: &#x27;EINVALIDPACKAGENAME&#x27;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Node.js v18.16.0</span><br></pre></td></tr></table></figure></div>
+<h4 id="非法字符"><a href="#非法字符" class="headerlink" title="非法字符"></a>非法字符</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cnpm i @iktakahiro+markdown-it-katex@4.0.1</span><br><span class="line">C:\Users\Admin\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\lib\npa.js:17</span><br><span class="line">    throw newError;</span><br><span class="line">    ^</span><br><span class="line"></span><br><span class="line">Error: Invalid package name &quot;@iktakahiro+markdown-it-katex&quot;: name can only contain URL-friendly characters package: root › @iktakahiro+markdown-it-katex@4.0.1</span><br><span class="line">    at npa (C:\Users\HP\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\lib\npa.js:15:22)</span><br><span class="line">    at exports.parsePackageName (C:\Users\HP\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\lib\alias.js:4:13)</span><br><span class="line">    at Object.&lt;anonymous&gt; (C:\Users\HP\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\bin\install.js:165:7)</span><br><span class="line">    at Module._compile (node:internal/modules/cjs/loader:1254:14)</span><br><span class="line">    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)</span><br><span class="line">    at Module.load (node:internal/modules/cjs/loader:1117:32)</span><br><span class="line">    at Module._load (node:internal/modules/cjs/loader:958:12)</span><br><span class="line">    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)</span><br><span class="line">    at node:internal/main/run_main_module:23:47 &#123;</span><br><span class="line">  code: &#x27;EINVALIDPACKAGENAME&#x27;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Node.js v18.16.0</span><br></pre></td></tr></table></figure></div>
+
 <p>这个问题就出现在第1行，<code>@iktakahiro+markdown-it-katex@4.0.1</code>出现了不合适的<code>+</code>。第16行也写得很清楚。把包名改成<a class="link" href="https://www.npmjs.com/">npm官网</a>上的<code>@iktakahiro/markdown-it-katex@4.0.1</code>就好。</p>
-<h2 id="markdown渲染器问题"><a class="markdownIt-Anchor" href="#markdown渲染器问题"></a> Markdown渲染器问题</h2>
-<p>虽然说默认渲染器也算够用，但是有蛮多Typora支持的功能，它是不支持的！</p>
+<h2 id="Markdown渲染器问题"><a href="#Markdown渲染器问题" class="headerlink" title="Markdown渲染器问题"></a>Markdown渲染器问题</h2><p>虽然说默认渲染器也算够用，但是有蛮多Typora支持的功能，它是不支持的！</p>
 <p>比如说我需要用到的脚注、公式、上下标等等等等。</p>
 <p>所以我参考的有以下两篇文章：<a class="link" href="https://bugwz.com/2019/09/17/hexo-markdown-renderer/">Hexo的多种Markdown渲染器对比分析</a>、<a class="link" href="https://blog.csdn.net/qq_42951560/article/details/123596899">[Hexo]选择更高级的Markdown渲染器</a></p>
-<div class="note info fa-solid icon-padding"><i class="note-icon fa-solid fa-circle-info"></i><p>本博客现在使用的Markdown渲染器为<code>hexo-renderer-markdown-it-plus</code>。</p>
+<br>
+
+<div class="note info fa-solid icon-padding"><i class="note-icon fa-solid fa-circle-info"></i><p>　本博客现在使用的 M a r k d o w n 渲染器为<code>hexo-renderer-markdown-it-plus</code>。</p>
 </div>
-<p>但其实，许多Markdown渲染器对于中文文本的适配差劲得要命：</p>
-<p><img lazyload src="/images/loading.svg" data-src="SnipasteScreenShot_2023-06-18_16-19-04.png" alt="一个删除线在中文语境下识别渲染失败的例子" title="一个删除线在中文语境下识别渲染失败的例子"></p>
+
+
+
+<p><br>但其实，许多Markdown渲染器对于中文文本的适配差劲得要命：</p>
+<p><img lazyload src="/images/loading.svg" data-src="/2023/06/17/Hexo%E5%BB%BA%E7%AB%99%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97/SnipasteScreenShot_2023-06-18_16-19-04.png" alt="一个删除线在中文语境下识别渲染失败的例子" title="一个删除线在中文语境下识别渲染失败的例子"></p>
 <p>不过也不能太过苛责，毕竟中文没有那么多空格在文章里。</p>
 <p>但问题要去解决啊，所以我的解决办法是。。。<em>Markdown和Html混编</em>。</p>
-<p><img lazyload src="/images/loading.svg" data-src="SnipasteScreenShot3.png" alt="混编实录" title="混编实录"></p>
-<p>确实，Html语法能够解决很多问题。剩下的？剩下的<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>a</mi><mi>T</mi><mi>e</mi><mi>X</mi><mrow></mrow></mrow><annotation encoding="application/x-tex">LaTeX{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">L</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mord"></span></span></span></span>语法能解决……</p>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>LaTeX</mtext><mrow></mrow></mrow><annotation encoding="application/x-tex">\LaTeX{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.89883em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.68333em;"><span style="top:-2.904999em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.46782999999999997em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span><span class="mord"></span></span></span></span>、Html语法传送门：</p>
+<p><img lazyload src="/images/loading.svg" data-src="/2023/06/17/Hexo%E5%BB%BA%E7%AB%99%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97/SnipasteScreenShot3.png" alt="混编实录" title="混编实录"></p>
+<p>确实，Html语法能够解决很多问题。剩下的？剩下的 $\LaTeX$ 语法能解决……</p>
+<p>$\LaTeX$、Html语法传送门：</p>
 <a class="button  regular" href="https://zhuanlan.zhihu.com/p/139156617" title="LaTeX"><i class="fa-solid fa-share-from-square"></i> LaTeX</a> 
+
 <a class="button  regular" href="[HTML（超文本标记语言） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/HTML)" title="Html"><i class="fa-solid fa-share-from-square"></i> Html</a>
-<h2 id="写在后面"><a class="markdownIt-Anchor" href="#写在后面"></a> 写在后面</h2>
-<p>搭建这个博客，也是跟着文档一步一步走，跟着知乎上的教程一步步来的。但是，毕竟每个人的网络不一样，每个人的设备也不一样，遇到的问题也会是千奇百怪的。</p>
+
+<h2 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h2><p>搭建这个博客，也是跟着文档一步一步走，跟着知乎上的教程一步步来的。但是，毕竟每个人的网络不一样，每个人的设备也不一样，遇到的问题也会是千奇百怪的。</p>
 <p>以上遇到的问题，有的有些教程提到了，有的却连搜索引擎都找不到结果。实在是本人资源匮乏，真要去翻Issue可以翻个天长地久还经常无功而返，而要去Issue上提问题，那真的还不如自己找（而且最后发现大部分都是我自己的问题），所以只好一步一步，跟着经验和知乎、博客园、CSDN上零碎的只言片语慢慢来。</p>
 <p>我其实并不会编程，而且因为学业的关系，前前后后花了近两个月，才把博客基本调教好。</p>
 <p>不知道是不是真的没有人遇到过类似的问题，还是没有人愿意写这种文章，至少举目所及，我掉进的坑里，人迹罕至T_T</p>
@@ -111,27 +107,24 @@
   <entry>
     <title>流萤与星空</title>
     <url>/2023/06/04/%E6%B5%81%E8%90%A4%E4%B8%8E%E6%98%9F%E7%A9%BA/</url>
-    <content><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1426611455&auto=0&height=66"></iframe>
-<p>流萤是明灭迷离、天真奇丽的憧憬<br>
-尘埃是虚无纷飞，终将落地的厚重<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
-<p>腐草为萤也 飞萤缀于地<br>
-流光为星也 群星饰于天</p>
-<p>星空什么也不代表，但它代表了一切浪漫与憧憬。</p>
-<p>若是来人能漫步于群星之间，他们的胸膛会灼热吗？<br>
-如果古人尝试触摸星穹一角，他们的眼睛会闪烁吗？</p>
-<p>流萤自于地上的尘埃，群星成于宇宙的尘埃</p>
-<p>浮游的流萤，飘散的群星</p>
-<p>星星是漫游者的灯塔</p>
-<p>缀满天地时空的模糊光点，雨点落入浅海的无数涟漪，此身坠入梦境的触觉振动，流萤飞进最纯净澄澈的幻想</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>改编自歌曲文案 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="星星沉默不语。" data-whm="星空依旧徒然明亮。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="afaf4e3a8fa3b0a8404b105f6bc71c03b6debc18399b322510591a23e5e62053">9906d02578a34a21130e8a7e7a0484cb85ef6a0b461327db52b1288bbd61b363a997c4de8a05c0dec8d666962df04c70d45ad856eeb800a30dcfeddff6957d1df699354c3cfcac1a4b96d864690cb16abf0e1d04f6014994be31b86d48b2f6b181975818cbc79a55d6905e640fa7889e2f8468e74fdb3a094a067667d8672c72fc687b20b1dc53a2b8e55ceed791a36578421fddc3e27205c304f0904ba6ed6bba6cbf493919511cc029874051c5c78f33e3ca0c733477da06c1a2dac0a23d96a26bf547c971cfc2eb32ea5e1e52fad0304179c91b4bcff02e191a6ba2b51962ed198be13289e32162c6cd9b547d2ebbf7af87ee2d553bc6a312067ba4e4bc7abf9c040b8d8bf1691c5102f6fcd9b7cc1f04f7c38d7b9a1be51d813582464adafe1a7ad9f6bcd0ab8569411b80c8f14a8cf9df1a35bb01c16937e5a4288c51409aaf5ff0c772a03dc591906d0ffd238e95bb8638a2185778c7140511b53332b7745b8f1de86ba537a4fae12043f232274aa106edef79eb2a33929d2561c1b593a22d6b999b4e59fffdfb069e8f3b692e425688973b051ecbe2fb6ff61431a213dc16e01c1ae1177022110796ab5c3d45311a065597780de02b3e0fa0a77f7b4432498021857b62768832e42d8c22c16aa49a6e5b000eff74081314e56bcf548f00a54ed4d089627e90c42b7264cb6356bfd960fc65911feb40099cf2ce20d5cae59f229dc8655256ed88ce660adc2e3c78317f236aef879f85f5b4f4520dccf271c9a3d4b7518d8d998d78d73a0c0c8919a5322d14819230d31c14b4daafb31ae5801975648d3d77df6dce463b7282cf3cf8326a8449f9c748e27959c97c5ce27b5bfefbf7c76245b28efe5fc397dc81c8dba5d1074dc16a3d390b660ed377467e722e6a662cc9b323190656533795cae83c7e0ff95f931af5d07c0fc245b08595b25eb043154f717d3b46e98b23cf02c2dbc26e9a03e98efe9023a6aa8f27de028901e7799d22981db30db4506ffbc38a2deec1a6e0e8f9023780591996c2a2aad868eaae64c830f344f69a7e8743c96380f6c722cd1860de9ce133e52e4e48185c3569c3f9a08c9e4c051bde1718cabf5a8d756e85585fd073d57acd3b644ec5288625e329baaec9ab14a2e14a760c785c357ad514750743ac6c3890a5be40c793c0c09c09b87379d3208ea28d52680e35fb7eb35e0f8dd63a6c7af8e195b99ce5f3cd34dd796da95430e3116535b75402df5abea790f70eb09012d46633cea8e40a6436edf32cdab8fe946d9cd994a2fca0e4be183165de1c3d94bbbe828c59b0d94b8209be9cd3d00c45db11853ccf62eb5932976a9a71d946e0d41a6b7c8f53b73335ea0a902c7f221842ce7009efa25a3dc1021730854f6acaaaccba87</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-shrink">
+      <input class="hbe hbe-input-field hbe-input-field-shrink" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-shrink" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-shrink">星星期待着你，呼唤其名。</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>絮叨碎笔</category>
+      </categories>
       <tags>
+        <tag>星空</tag>
+        <tag>幻想</tag>
         <tag>灵感</tag>
       </tags>
   </entry>
