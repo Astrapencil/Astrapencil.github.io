@@ -51,30 +51,55 @@ body:not(.heimu_toggle_on) .heimu:hover a,body:not(.heimu_toggle_on) a:hover .he
 
 <p>原则：缺啥装啥。如果不想遇到下面的报错，那就好好去翻<code>\.store</code>找版本号（见上节）。</p>
 <h4 id="require-of-ES-Module"><a href="#require-of-ES-Module" class="headerlink" title="require() of ES Module"></a><code>require() of ES Module</code></h4><p>首先上原文</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cnpm install hexo-all-minifier</span><br><span class="line">&gt; hexo-all-minifier@0.5.7 › imagemin-mozjpeg@9.0.0 › mozjpeg@^7.0.0 postinstall D:\Hexo\node_modules\.store\mozjpeg@7.1.1\node_modules\mozjpeg</span><br><span class="line">&gt; node lib/install.js</span><br><span class="line">D:\Hexo\node_modules\.store\decompress-tarbz2@4.1.1\node_modules\decompress-tarbz2\index.js:3</span><br><span class="line">const fileType = require(&#x27;file-type&#x27;);</span><br><span class="line">                 ^</span><br><span class="line"></span><br><span class="line">Error [ERR_REQUIRE_ESM]: require() of ES Module D:\Hexo\node_modules\.store\file-type@18.4.0\node_modules\file-type\index.js from D:\Hexo\node_modules\.store\decompress-tarbz2@4.1.1\node_modules\decompress-tarbz2\index.js not supported.</span><br><span class="line">Instead change the require of D:\Hexo\node_modules\.store\file-type@18.4.0\node_modules\file-type\index.js in D:\Hexo\node_modules\.store\decompress-tarbz2@4.1.1\node_modules\decompress-tarbz2\index.js to a dynamic import() which is available in all CommonJS modules.</span><br><span class="line">    at Object.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\decompress-tarbz2@4.1.1\node_modules\decompress-tarbz2\index.js:3:18)</span><br><span class="line">    at Object.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\decompress@4.2.1\node_modules\decompress\index.js:5:26)</span><br><span class="line">    at Object.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\bin-build@3.0.0\node_modules\bin-build\index.js:2:20)</span><br><span class="line">    at Object.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\mozjpeg@7.1.1\node_modules\mozjpeg\lib\install.js:4:18) &#123;</span><br><span class="line">  code: &#x27;ERR_REQUIRE_ESM&#x27;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<details class="white" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>报错全文 </summary>
+              <div class="content">
+              <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cnpm install hexo-all-minifier</span><br><span class="line">&gt; hexo-all-minifier@0.5.7 › imagemin-mozjpeg@9.0.0 › mozjpeg@^7.0.0 postinstall D:\Hexo\node_modules\.store\mozjpeg@7.1.1\node_modules\mozjpeg</span><br><span class="line">&gt; node lib/install.js</span><br><span class="line">D:\Hexo\node_modules\.store\decompress-tarbz2@4.1.1\node_modules\decompress-tarbz2\index.js:3</span><br><span class="line">const fileType = require(&#x27;file-type&#x27;);</span><br><span class="line">                 ^</span><br><span class="line"></span><br><span class="line">Error [ERR_REQUIRE_ESM]: require() of ES Module D:\Hexo\node_modules\.store\file-type@18.4.0\node_modules\file-type\index.js from D:\Hexo\node_modules\.store\decompress-tarbz2@4.1.1\node_modules\decompress-tarbz2\index.js not supported.</span><br><span class="line">Instead change the require of D:\Hexo\node_modules\.store\file-type@18.4.0\node_modules\file-type\index.js in D:\Hexo\node_modules\.store\decompress-tarbz2@4.1.1\node_modules\decompress-tarbz2\index.js to a dynamic import() which is available in all CommonJS modules.</span><br><span class="line">    at Object.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\decompress-tarbz2@4.1.1\node_modules\decompress-tarbz2\index.js:3:18)</span><br><span class="line">    at Object.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\decompress@4.2.1\node_modules\decompress\index.js:5:26)</span><br><span class="line">    at Object.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\bin-build@3.0.0\node_modules\bin-build\index.js:2:20)</span><br><span class="line">    at Object.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\mozjpeg@7.1.1\node_modules\mozjpeg\lib\install.js:4:18) &#123;</span><br><span class="line">  code: &#x27;ERR_REQUIRE_ESM&#x27;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+              </div>
+            </details>
+
 <p>摘取重点可以看出，报错的中心在于第八行，新加入的插件（由报错看，是<code>file-type</code>的18.4.0版本）与原软件在规范（CommonJs&#x2F;ES）的处理上起了冲突。</p>
 <p>就是npm包<code>@latest</code>版本的锅！好好去翻<code>\.store</code>。</p>
-<h4 id="非法字符"><a href="#非法字符" class="headerlink" title="非法字符"></a>非法字符</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cnpm i @iktakahiro+markdown-it-katex@4.0.1</span><br><span class="line">C:\Users\Admin\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\lib\npa.js:17</span><br><span class="line">    throw newError;</span><br><span class="line">    ^</span><br><span class="line"></span><br><span class="line">Error: Invalid package name &quot;@iktakahiro+markdown-it-katex&quot;: name can only contain URL-friendly characters package: root › @iktakahiro+markdown-it-katex@4.0.1</span><br><span class="line">    at npa (C:\Users\HP\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\lib\npa.js:15:22)</span><br><span class="line">    at exports.parsePackageName (C:\Users\HP\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\lib\alias.js:4:13)</span><br><span class="line">    at Object.&lt;anonymous&gt; (C:\Users\HP\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\bin\install.js:165:7)</span><br><span class="line">    at Module._compile (node:internal/modules/cjs/loader:1254:14)</span><br><span class="line">    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)</span><br><span class="line">    at Module.load (node:internal/modules/cjs/loader:1117:32)</span><br><span class="line">    at Module._load (node:internal/modules/cjs/loader:958:12)</span><br><span class="line">    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)</span><br><span class="line">    at node:internal/main/run_main_module:23:47 &#123;</span><br><span class="line">  code: &#x27;EINVALIDPACKAGENAME&#x27;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Node.js v18.16.0</span><br></pre></td></tr></table></figure></div>
+<h4 id="非法字符"><a href="#非法字符" class="headerlink" title="非法字符"></a>非法字符</h4><details class="white" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>报错全文 </summary>
+              <div class="content">
+              <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cnpm i @iktakahiro+markdown-it-katex@4.0.1</span><br><span class="line">C:\Users\Admin\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\lib\npa.js:17</span><br><span class="line">    throw newError;</span><br><span class="line">    ^</span><br><span class="line"></span><br><span class="line">Error: Invalid package name &quot;@iktakahiro+markdown-it-katex&quot;: name can only contain URL-friendly characters package: root › @iktakahiro+markdown-it-katex@4.0.1</span><br><span class="line">    at npa (C:\Users\HP\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\lib\npa.js:15:22)</span><br><span class="line">    at exports.parsePackageName (C:\Users\HP\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\lib\alias.js:4:13)</span><br><span class="line">    at Object.&lt;anonymous&gt; (C:\Users\HP\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\bin\install.js:165:7)</span><br><span class="line">    at Module._compile (node:internal/modules/cjs/loader:1254:14)</span><br><span class="line">    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)</span><br><span class="line">    at Module.load (node:internal/modules/cjs/loader:1117:32)</span><br><span class="line">    at Module._load (node:internal/modules/cjs/loader:958:12)</span><br><span class="line">    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)</span><br><span class="line">    at node:internal/main/run_main_module:23:47 &#123;</span><br><span class="line">  code: &#x27;EINVALIDPACKAGENAME&#x27;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Node.js v18.16.0</span><br></pre></td></tr></table></figure></div>
+              </div>
+            </details>
 
 <p>这个问题就出现在第1行，<code>@iktakahiro+markdown-it-katex@4.0.1</code>出现了不合适的<code>+</code>。第16行也写得很清楚。把包名改成<a class="link" href="https://www.npmjs.com/">npm官网</a>上的<code>@iktakahiro/markdown-it-katex@4.0.1</code>就好。</p>
-<h2 id="Markdown渲染器问题"><a href="#Markdown渲染器问题" class="headerlink" title="Markdown渲染器问题"></a>Markdown渲染器问题</h2><p>虽然说默认渲染器也算够用，但是有蛮多Typora支持的功能，它是不支持的！</p>
-<p>比如说我需要用到的脚注、公式、上下标等等等等。</p>
-<p>所以我参考的有以下两篇文章：<a class="link" href="https://bugwz.com/2019/09/17/hexo-markdown-renderer/">Hexo的多种Markdown渲染器对比分析</a>、<a class="link" href="https://blog.csdn.net/qq_42951560/article/details/123596899">[Hexo]选择更高级的Markdown渲染器</a></p>
+<h2 id="Markdown和公式渲染器问题"><a href="#Markdown和公式渲染器问题" class="headerlink" title="Markdown和公式渲染器问题"></a>Markdown和公式渲染器问题</h2><br>
+<div class="info_x x_border"><i class="fa-solid fa-circle-info"></i><span>&emsp;&emsp;本博客现在使用的Markdown渲染器为<code>hexo-renderer-marked</code>，<del>使用的公式渲染器为<code>hexo-fliter-mathjax</code></del>由于该插件会报错并且我难以解决，所以公式类书写换用JS方式实现。</span></div>
+
 <br>
 
-<div class="info_x x_border"><i class="fa-solid fa-circle-info"></i><span>&emsp;&emsp;本博客现在使用的Markdown渲染器为<code>hexo-renderer-marked</code>，使用的公式渲染器为<code>hexo-fliter-mathjax</code>。</span></div>
-
-<p><br>但其实，许多Markdown渲染器对于中文文本的适配差劲得要命：</p>
+<h3 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h3><p>Typora还是太好用了，兼容各种Markdown扩展语法，和它一比，原版渲染器相形见绌。</p>
+<p>也不是没有考虑过换用更高级的Markdown渲染器，也参考有几篇文章（<a class="link" href="https://bugwz.com/2019/09/17/hexo-markdown-renderer/">Hexo的多种Markdown渲染器对比分析</a>、<a class="link" href="https://blog.csdn.net/qq_42951560/article/details/123596899">[Hexo]选择更高级的Markdown渲染器</a>），但是折腾来折腾去，还是换回了默认款。</p>
+<ol>
+<li><p>很多Markdown渲染器对于中文文本的适配十分差劲</p>
 <p><img lazyload src="/images/loading.svg" data-src="/2023/06/17/Hexo%E5%BB%BA%E7%AB%99%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97/SnipasteScreenShot_2023-06-18_16-19-04.png" alt="一个删除线在中文语境下识别渲染失败的例子" title="一个删除线在中文语境下识别渲染失败的例子"></p>
-<p>不过也不能太过苛责，毕竟中文没有那么多空格在文章里。</p>
-<p>但问题要去解决啊，所以，，我居然真的去开始学Html和CSS了。。。</p>
-<p><img lazyload src="/images/loading.svg" data-src="/2023/06/17/Hexo%E5%BB%BA%E7%AB%99%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97/SnipasteScreenShot3.png" alt="混编实录" title="混编实录"></p>
-<p>所以现在就是，Markdown能解决的先用Markdown，其次用博客主题的配件，最后上Html和CSS，<span class="heimu">，缝合怪吗</span>。</p>
-<p>Html、CSS语法传送门：</p>
-<a class="button  regular" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML" title="Html"><i class="fa-solid fa-share-from-square"></i> Html</a>
+<p>这个问题无论换哪个渲染器都没有解决。</p>
+<p>不过也不能太过苛责，毕竟中文没有那么多空格在文章里。但这确实是一个需要去解决的问题啊。</p>
+</li>
+<li><p>其它渲染器自带的CSS样式<strong>不！好！看！</strong></p>
+<p>本来用它的配件就是为了省事，结果你跟我说我还要自己写样式，不如不用。</p>
+</li>
+<li><p>配件繁多，难折腾，还冗余。</p>
+</li>
+</ol>
+<p>综上，我还是换回了默认的渲染器<code>hexo-renderer-marked</code>，转而通过自己写CSS样式表来实现提示、引用等功能。</p>
+<p>所以现在就是，Markdown能解决的先用Markdown，其次用博客主题的配件，再不济上Html、CSS，最后上JS<span class="heimu" title="你知道得太多了">，缝合怪吗</span>。</p>
+<h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p><code>hexo-filter-mathjax</code>插件在某一次运行中突然便出现了该问题</p>
+<details class="white" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>报错全文 </summary>
+              <div class="content">
+              <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">FATAL Something&#x27;s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html</span><br><span class="line">Error: Can&#x27;t find handler for document</span><br><span class="line">    at HandlerList.handlesDocument (D:\Hexo\node_modules\.store\mathjax-full@3.2.2\node_modules\mathjax-full\js\core\HandlerList.js:60:15)</span><br><span class="line">    at HandlerList.document (D:\Hexo\node_modules\.store\mathjax-full@3.2.2\node_modules\mathjax-full\js\core\HandlerList.js:64:21)</span><br><span class="line">    at Object.document (D:\Hexo\node_modules\.store\mathjax-full@3.2.2\node_modules\mathjax-full\js\mathjax.js:11:41)</span><br><span class="line">    at D:\Hexo\node_modules\.store\hexo-filter-mathjax@0.9.0\node_modules\hexo-filter-mathjax\lib\filter.js:42:26</span><br><span class="line">    at Hexo.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\hexo-filter-mathjax@0.9.0\node_modules\hexo-filter-mathjax\index.js:20:18)</span><br><span class="line">    at Hexo.tryCatcher (D:\Hexo\node_modules\.store\bluebird@3.7.2\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at Hexo.&lt;anonymous&gt; (D:\Hexo\node_modules\.store\bluebird@3.7.2\node_modules\bluebird\js\release\method.js:15:34)</span><br><span class="line">    at D:\Hexo\node_modules\.store\hexo@6.3.0\node_modules\hexo\lib\extend\filter.js:67:52</span><br><span class="line">    at tryCatcher (D:\Hexo\node_modules\.store\bluebird@3.7.2\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at Object.gotValue (D:\Hexo\node_modules\.store\bluebird@3.7.2\node_modules\bluebird\js\release\reduce.js:166:18)</span><br><span class="line">    at Object.gotAccum (D:\Hexo\node_modules\.store\bluebird@3.7.2\node_modules\bluebird\js\release\reduce.js:155:25)</span><br><span class="line">    at Object.tryCatcher (D:\Hexo\node_modules\.store\bluebird@3.7.2\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at Promise._settlePromiseFromHandler (D:\Hexo\node_modules\.store\bluebird@3.7.2\node_modules\bluebird\js\release\promise.js:547:31)</span><br><span class="line">    at Promise._settlePromise (D:\Hexo\node_modules\.store\bluebird@3.7.2\node_modules\bluebird\js\release\promise.js:604:18)</span><br><span class="line">    at Promise._settlePromise0 (D:\Hexo\node_modules\.store\bluebird@3.7.2\node_modules\bluebird\js\release\promise.js:649:10)</span><br><span class="line">    at Promise._settlePromises (D:\Hexo\node_modules\.store\bluebird@3.7.2\node_modules\bluebird\js\release\promise.js:729:18)</span><br><span class="line">    at _drainQueueStep (D:\Hexo\node_modules\.store\bluebird@3.7.2\node_modules\bluebird\js\release\async.js:93:12)</span><br><span class="line">    at _drainQueue (D:\Hexo\node_modules\.store\bluebird@3.7.2\node_modules\bluebird\js\release\async.js:86:9)</span><br><span class="line">    at Async._drainQueues (D:\Hexo\node_modules\.store\bluebird@3.7.2\node_modules\bluebird\js\release\async.js:102:5)</span><br><span class="line">    at Async.drainQueues [as _onImmediate] (D:\Hexo\node_modules\.store\bluebird@3.7.2\node_modules\bluebird\js\release\async.js:15:14)</span><br><span class="line">    at process.processImmediate (node:internal/timers:476:21)</span><br><span class="line">node:internal/process/promises:288</span><br><span class="line">            triggerUncaughtException(err, true /* fromPromise */);</span><br><span class="line">            ^</span><br><span class="line"></span><br><span class="line">[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason &quot;Can&#x27;t load &#x27;./util/entities/e.js&#x27;: No asyncLoad method specified&quot;.] &#123;</span><br><span class="line">  code: &#x27;ERR_UNHANDLED_REJECTION&#x27;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Node.js v18.16.0</span><br></pre></td></tr></table></figure></div>
+              </div>
+            </details>
 
-<a class="button  regular" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS" title="CSS"><i class="fa-solid fa-share-from-square"></i> CSS</a> 
+<p>因为缺乏专业知识所以我也不知道该如何解决 ; (  ，希望有大佬能帮解答一下。</p>
+<p>日后想写公式的话就是JS引入<code>mathjax</code>：</p>
+<p>在文档首加入</p>
+<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.bootcss.com/mathjax/3.0.5/es5/tex-mml-chtml.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
 
+<p><code>mathjax</code>具体语法请自行<del>百度</del>搜索！</p>
 <h2 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h2><p>搭建这个博客，也是跟着文档一步一步走，跟着知乎上的教程一步步来的。但是，毕竟每个人的网络不一样，每个人的设备也不一样，遇到的问题也会是千奇百怪的。</p>
 <p>以上遇到的问题，有的有些教程提到了，有的却连搜索引擎都找不到结果。实在是本人资源匮乏，真要去翻Issue可以翻个天长地久还经常无功而返，而要去Issue上提问题，那真的还不如自己找（而且最后发现大部分都是我自己的问题），所以只好一步一步，跟着经验和知乎、博客园、CSDN上零碎的只言片语慢慢来。</p>
 <p>我其实并不会编程，而且因为学业的关系，前前后后花了近两个月，才把博客基本调教好。</p>
@@ -84,8 +109,7 @@ body:not(.heimu_toggle_on) .heimu:hover a,body:not(.heimu_toggle_on) a:hover .he
 <blockquote>
 <p>以前的伸手党给个链接还会自己下；现在的伸手党真的只会伸手。</p>
 </blockquote>
-<p>叹气归叹气，但还是希望这篇文章能够让有需要的人在自食其力的道路上，多一些成就感，少一些挫败感吧！</p>
-<p>耐心，努力，总会好的。</p>
+<p>还是希望这篇文章能够让有需要的人在自食其力的道路上，多一些成就感，少一些挫败感吧！</p>
 ]]></content>
       <categories>
         <category>技术与经验</category>
@@ -98,9 +122,11 @@ body:not(.heimu_toggle_on) .heimu:hover a,body:not(.heimu_toggle_on) a:hover .he
   <entry>
     <title>Hello World</title>
     <url>/2023/05/14/hello-world/</url>
-    <content><![CDATA[<p>这篇文章的发布时间是站点正式开张的日子！</p>
+    <content><![CDATA[<h1 id="开张！"><a href="#开张！" class="headerlink" title="开张！"></a>开张！</h1><p>这篇文章的发布时间是站点正式立项的日子！</p>
 <p>尽管它还在用着github的域名，但我相信，它迟早会有自己的域名的！</p>
-<p>当然也不要忘记，5月16日它正式Deploy，所以建站时间就是从5月16日算起！</p>
+<p>当然，5月16日它正式Deploy，所以建站时间就是从5月16日算起！</p>
+<hr>
+<p>8月11日编辑：新域名<a class="link" href="https://astralun.top">astralun.top</a>！</p>
 ]]></content>
       <categories>
         <category>足迹与历程</category>
