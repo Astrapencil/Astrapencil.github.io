@@ -2,15 +2,15 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>/%E8%B6%B3%E8%BF%B9%E4%B8%8E%E5%8E%86%E7%A8%8B/hello-world/</url>
+    <url>/%E5%9E%92%E7%9F%B3%E6%88%90%E5%A1%94%E7%9A%84%E8%B6%B3%E8%BF%B9/hello-world/</url>
     <content><![CDATA[<h1 id="开张！"><a href="#开张！" class="headerlink" title="开张！"></a>开张！</h1><p>这篇文章的发布时间是站点正式立项的日子！</p>
-<p>尽管它还在用着github的域名，但我相信，它迟早会有自己的域名的！</p>
+<p>尽管它还在用着github的域名……</p>
 <p>当然，5月16日它正式Deploy，所以建站时间就是从5月16日算起！</p>
 <hr>
-<p>8月11日编辑：新域名<a class="link"   href="https://astralun.top" >astralun.top <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>！</p>
+<p>8月11日编辑：新域名<a href="https://astralun.top">astralun.top</a>！</p>
 ]]></content>
       <categories>
-        <category>足迹与历程</category>
+        <category>垒石成塔的足迹</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
@@ -19,7 +19,7 @@
   </entry>
   <entry>
     <title>Hexo建站踩坑日志</title>
-    <url>/%E6%8A%80%E6%9C%AF%E4%B8%8E%E7%BB%8F%E9%AA%8C/Hexo%E5%BB%BA%E7%AB%99%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97/</url>
+    <url>/%E7%9F%A5%E8%AF%86%E3%80%81%E7%BB%8F%E9%AA%8C%E4%B8%8E%E6%8A%80%E5%B7%A7/Hexo%E5%BB%BA%E7%AB%99%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="/css/personalstyle.css">
 
 <p>前些日子看到了本年级5班搭建的“班级主页”（现在是Cloudreve页面不知道为什么），心血来潮想自己搞自己的博客。搜了<a class="link"   href="https://hexo.io/zh-cn/docs/" >HEXO官方文档 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>、<a class="link"   href="https://zhuanlan.zhihu.com/p/547520780" >知乎的教程 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（我觉得写得较好的一篇），却还愣是栽进不明所以的大坑里去。</p>
@@ -128,7 +128,7 @@
 <p>还是希望这篇文章能够让有需要的人在自食其力的道路上，多一些成就感，少一些挫败感吧！</p>
 ]]></content>
       <categories>
-        <category>技术与经验</category>
+        <category>知识、经验与技巧</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
@@ -137,7 +137,7 @@
   </entry>
   <entry>
     <title>星野爱——爱与谎言的绝症</title>
-    <url>/%E8%A7%82%E5%BD%B1%E6%9C%89%E6%84%9F/%E6%98%9F%E9%87%8E%E7%88%B1%E2%80%94%E2%80%94%E7%88%B1%E4%B8%8E%E8%B0%8E%E8%A8%80%E7%9A%84%E7%BB%9D%E7%97%87/</url>
+    <url>/%E4%BA%8E%E6%96%AF%E6%9C%89%E6%84%9F/%E6%98%9F%E9%87%8E%E7%88%B1%E2%80%94%E2%80%94%E7%88%B1%E4%B8%8E%E8%B0%8E%E8%A8%80%E7%9A%84%E7%BB%9D%E7%97%87/</url>
     <content><![CDATA[
   <div class="note-large red">
     <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
@@ -164,18 +164,18 @@
 <p>死亡，不是谎言。 </p>
 ]]></content>
       <categories>
-        <category>观影有感</category>
+        <category>于斯有感</category>
       </categories>
       <tags>
-        <tag>我推的孩子</tag>
         <tag>番剧</tag>
-        <tag>观后感</tag>
-        <tag>星野爱</tag>
+        <tag>推しの子</tag>
+        <tag>有感而发</tag>
+        <tag>星野 アイ</tag>
       </tags>
   </entry>
   <entry>
     <title>流萤与星空</title>
-    <url>/%E7%B5%AE%E5%8F%A8%E7%A2%8E%E7%AC%94/%E6%B5%81%E8%90%A4%E4%B8%8E%E6%98%9F%E7%A9%BA/</url>
+    <url>/%E9%97%B2%E7%AC%94%E7%A2%8E%E7%BA%B8/%E6%B5%81%E8%90%A4%E4%B8%8E%E6%98%9F%E7%A9%BA/</url>
     <content><![CDATA[
 <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="星星沉默不语。" data-whm="星空依旧徒然明亮。">
   <script id="hbeData" type="hbeData" data-hmacdigest="8b3463857219328be427463ab32184d8cdc2b4c32d836978a062b9d3bf92d4bb">9906d02578a34a21130e8a7e7a0484cb85ef6a0b461327db52b1288bbd61b363a997c4de8a05c0dec8d666962df04c70d45ad856eeb800a30dcfeddff6957d1df699354c3cfcac1a4b96d864690cb16abf0e1d04f6014994be31b86d48b2f6b15addbd26f29fd15381e0da8909941d19fd7d217c3ca2b78ff7dc3624a78f8d94298c95d2643acaceb48338b6bbfa920f5f2d4208c3490d1246b3d178335e78926f59f853f2327c5b4df87bead679424630c18d03eb403d04595317275f76c27d9b99254709a775fd537ceb77ea3704caa67b86b5a26c43b74e2c31db5a2959b2502c09ac11232b145a88458a40305eaa3d8039bf04f674c8a2df321b638007f08a5d196d347c9c3c8bd037f1a4c8f6106bddf6f75c1cd20d925350d7449722bf361982d74c99c49a5e89352dfa786d9e52704adfd18a0e82d50aad69819121aea084fc2afdead87dcc22359fdfcef908685b752f41c8b35d35c41276b213092a416f12cd068b85511c7f4a17b2aea0c466f6a1fa37e1b3791a105b7e9081259dfcd6e588f03ac48347c9c60cd176b8c4b7f5db7a8780c9322fc36ab86a9ea44fd10538bac2b057b8fd403f20bffbd5438245c7c24893cec975eb3d90b5a00a49cd60e71fcc5f97dc394cda2b8bff936a90e0219aa969e857f8d2492e0f19ce34be2d00cd77232d9df9394fc7ee50b397092eb9dda3e8bef6c4813c14f25836ba5135700717bc9fb59232f5d01fa249b89838812749ff3df1edfeab8611741bec375df0fff9306d221eb83c946eaa075b6ee5fbd67b0125e54bb6f15ddf3120c59a453593c10988e0bb384cd3ed63a1f8aaaba8faa77d9e2aa1853a64ec9e45151b923b362221f600eab59a65eca010b864875637204e384bdcaa71d99146eeefadba193b01c8f73bd9f731fbb31a9540379fe9bba2599635acda5f79cfc6f84024440ad7931f19e779140a1a004f3cfe9a1c455d3a817a9849b356db982de43ff99a40e1e093e676350d21cb24570740934539464332d168023f44fd6022637918cf67675c5014d4b051cfb4dbe85fabac898612da2fd75fd73b2d7add2acf85510dcbdbf639bbe2db361d2002620c103f58c19fe268b3b9bee58e281777c586252e082f146c3b2a1d99d2a119276f4e50cb1f6e883aa917fb379e648703b9d95cc83e37f1e3ab44402278e9b63769d08007eeceb63ed7e40b7bb83c8447ec107310a24c83a074747bee408e88f2e20d48cbe7f2d628c997b44fe051927a68ed8e2ac8be741b5fcc76ed02fea7fd1a5f8f0612265e581079b8ba45e05ff81632aee853bf9b4b9940d209f7fac22c34c20e81b13ea1d7c41e08a15d18d152b050dda195476ceb968b4f8b75e98f6e80dd1e595a4fbe3c47ae6d5a8e95147cb23f</script>
@@ -183,19 +183,19 @@
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
       <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">星星期待着你，呼唤其名。</span>
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">星亦有其五言之名。</span>
       </label>
     </div>
   </div>
 </div>
 <script data-swup-reload-script src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-        <category>絮叨碎笔</category>
+        <category>闲笔碎纸</category>
       </categories>
       <tags>
         <tag>星空</tag>
-        <tag>幻想</tag>
         <tag>灵感</tag>
+        <tag>尘埃</tag>
       </tags>
   </entry>
 </search>
