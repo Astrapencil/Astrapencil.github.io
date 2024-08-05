@@ -131,7 +131,7 @@
               light: "https://pic.imgdb.cn/item/669e18c5d9c307b7e9bbe75e.webp",
               dark: "https://pic.imgdb.cn/item/669dfc74d9c307b7e99fa692.webp",
             },
-            title: "纶的塔上星图",
+            title: '<span style="font-weight:bold">纶的塔上星图</span>',
             subtitle: {
               text: [
                 "心中当有一座巨塔，好将思想束之高阁",
@@ -147,7 +147,7 @@
             },
             text_color: { light: "#171717", dark: "#d1d1b6" },
             text_style: {
-              title_size: "2.8rem",
+              title_size: "3.2rem",
               subtitle_size: "1.5rem",
               line_height: 1.2,
             },
@@ -215,6 +215,14 @@
               标签: { path: "/tags", icon: "fa-regular fa-tag" },
               分类: { path: "/categories", icon: "fa-regular fa-folder" },
               动态: { path: "/essays", icon: "fa-regular fa-feather-pointed" },
+              其他: {
+                icon: "fa-solid fa-bars-progress",
+                submenus: {
+                  聊天室: "vercel.astralun.top",
+                  地下室: "/basement",
+                  关于: "/about",
+                },
+              },
             },
             search: { enable: !0, preload: !0 },
           },
@@ -225,7 +233,7 @@
               position: "left",
               first_item: "info",
               announcement:
-                "欢迎你来到这里！随时可以向我的网站邮箱提出建议：<br>Suggestions@astralun.top<br>再次衷心感谢！<br>&emsp;<br>有时我会在网站里加一些小小的解谜元素哦~",
+                "欢迎你来到这里！随时可以向我的网站邮箱提出建议：<br>Suggestions@astralun.top<br>再次衷心感谢！<br>&emsp;<br>有时我会在网站里加一些小小的解谜元素哦~<br>顺便一说，有10%的概率刷出动态里的稀有语录哦",
               show_on_mobile: !0,
               links: null,
             },
@@ -442,6 +450,21 @@
                         动态</a
                       >
                     </li>
+                    <li class="navbar-item">
+                      <a
+                        class="has-dropdown"
+                        href="#"
+                        onclick="&#34;return"
+                        false;&#34;
+                        ><i class="fa-solid fa-bars-progress fa-fw"></i> 其他
+                        <i class="fa-solid fa-chevron-down fa-fw"></i
+                      ></a>
+                      <ul class="sub-menu">
+                        <li><a href="/vercel.astralun.top">聊天室</a></li>
+                        <li><a href="/basement">地下室</a></li>
+                        <li><a href="/about">关于</a></li>
+                      </ul>
+                    </li>
                     <li class="navbar-item search search-popup-trigger">
                       <i class="fa-solid fa-magnifying-glass"></i>
                     </li>
@@ -512,6 +535,47 @@
                     ><span>动态 </span
                     ><i class="fa-regular fa-feather-pointed fa-sm fa-fw"></i
                   ></a>
+                </li>
+                <li
+                  class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full"
+                >
+                  <div
+                    class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full"
+                    navbar-data-toggle="submenu-其他"
+                  >
+                    <span>其他 </span
+                    ><i
+                      class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"
+                    ></i>
+                  </div>
+                  <div
+                    class="flex-col items-start px-2 py-2 hidden"
+                    data-target="submenu-其他"
+                  >
+                    <div
+                      class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl"
+                    >
+                      <a
+                        class="text-third-text-color text-xl"
+                        href="/vercel.astralun.top"
+                        >聊天室</a
+                      >
+                    </div>
+                    <div
+                      class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl"
+                    >
+                      <a class="text-third-text-color text-xl" href="/basement"
+                        >地下室</a
+                      >
+                    </div>
+                    <div
+                      class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl"
+                    >
+                      <a class="text-third-text-color text-xl" href="/about"
+                        >关于</a
+                      >
+                    </div>
+                  </div>
                 </li>
               </ul>
               <div class="statistics flex justify-around my-2.5">
@@ -625,20 +689,85 @@
                         <span style="color: #ff0000">ERROR: UNKNOWN DATE</span>
                       </div>
                       <script>
-                          function getMyDate(){
+                        function getMyDate() {
                           var myDate = new Date();
-                          document.getElementById("timy").innerHTML = `<span>${myDate.toLocaleDateString()+"&ensp;"+myDate.toLocaleTimeString()}</span>`
+                          document.getElementById("timy").innerHTML = `<span>${
+                            myDate.toLocaleDateString() +
+                            "&ensp;" +
+                            myDate.toLocaleTimeString()
+                          }</span>`;
                         }
-
-                        getMyDate()
-
-                        setInterval(function(){
+                        getMyDate();
+                        setInterval(function () {
                           getMyDate();
-                        },1000);
+                        }, 1000);
                       </script>
                       <div id="shuoshuo-content" class="px-4 py-2">
-                        <p>这个世界的时间戳也是可以流动的吗？</p>
+                        <p id="sentency">这世界的时间戳也是可以流动的吗？</p>
                       </div>
+                      <script>
+                        var sentence = [
+                          "世界是静止的。",
+                          "时间正在盘曲着旋转，历史同在交错中重演。",
+                          "另一条弦，同一世界。",
+                          "“宇宙已死”，你认为呢？",
+                          "尘封的谜题尚待揭开，<a href="astralun.top/闲笔碎纸/流萤与星空">今在的语句</a>垂枝待试。",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ ",
+                          "这个世界的时间戳也是可以流动的吗？ "
+                        ];
+                        function getSentence() {
+                          var sentency = Math.floor(
+                            Math.random() * sentence.length
+                          );
+                          document.getElementById(
+                            "sentency"
+                          ).innerHTML = `<span>${sentency}</span>`;
+                        }
+                        getSentence();
+                      </script>
                     </div>
                     <div
                       class="absolute left-[50.5px] top-3 transform w-2 h-2 border-solid border-t border-l bg-zinc-50 -rotate-45 border-border-color dark:bg-zinc-800"
