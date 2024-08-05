@@ -145,7 +145,7 @@
               loop: !0,
               smart_backspace: !0,
             },
-            text_color: { light: "#fff", dark: "#d1d1b6" },
+            text_color: { light: "#171717", dark: "#d1d1b6" },
             text_style: {
               title_size: "2.8rem",
               subtitle_size: "1.5rem",
@@ -569,7 +569,7 @@
                       <div
                         class="px-4 py-1.5 text-sm border-b border-border-color bg-zinc-50 dark:bg-zinc-800 text-third-text-color"
                       >
-                        昨天23:55
+                        2024/07/29
                       </div>
                       <div id="shuoshuo-content" class="px-4 py-2">
                         <p>
@@ -619,11 +619,23 @@
                       class="w-full border-border-color rounded-xl rounded-tl-none redefine-box-shadow-flat overflow-hidden"
                     >
                       <div
+                        id="timy"
                         class="px-4 py-1.5 text-sm border-b border-border-color bg-zinc-50 dark:bg-zinc-800 text-third-text-color"
-                        id="timee"
                       >
-                        Unknown date
+                        <span style="color: #ff0000">ERROR: UNKNOWN DATE</span>
                       </div>
+                      <script>
+                          function getMyDate(){
+                          var myDate = new Date();
+                          document.getElementById("timy").innerHTML = `<span>${myDate.toLocaleDateString()+"&ensp;"+myDate.toLocaleTimeString()}</span>`
+                        }
+
+                        getMyDate()
+
+                        setInterval(function(){
+                          getMyDate();
+                        },1000);
+                      </script>
                       <div id="shuoshuo-content" class="px-4 py-2">
                         <p>这个世界的时间戳也是可以流动的吗？</p>
                       </div>
@@ -802,20 +814,6 @@
         </div>
       </div>
     </main>
-    <script>
-      function getMyDate() {
-        var myDate = new Date();
-        var mytime = myDate.toLocaleTimeString();
-        var div = document.getElementById("timee");
-        div.innerHTML = `<span>${myDate.getFullYear()}/${myDate.getMonth()}/${myDate.getDate()} ${mytime}</span>`;
-      }
-
-      getMyDate();
-
-      setInterval(function() {
-        getMyDate();
-      }, 1000);
-    </script>
     <script src="https://s4.zstatic.net/ajax/libs/hexo-theme-redefine/2.6.4/js/libs/Swup.min.js"></script>
     <script src="https://s4.zstatic.net/ajax/libs/hexo-theme-redefine/2.6.4/js/libs/SwupSlideTheme.min.js"></script>
     <script src="https://s4.zstatic.net/ajax/libs/hexo-theme-redefine/2.6.4/js/libs/SwupScriptsPlugin.min.js"></script>
