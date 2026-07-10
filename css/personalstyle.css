@@ -1,0 +1,85 @@
+p {
+    font-family: 'Times New Roman', 'HanYiShuSongYiJian';
+}
+
+/*下划线动画*/
+h3.home-article-title{
+    display: inline-block !important;
+    flex: 0 0 auto !important;
+}
+
+h3.home-article-title>a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.2s ease;
+}
+
+h3.home-article-title>a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/*黑幕效果，使用class: heimu;就可以了*/
+span.heimu a.external,span.heimu a.external:visited,span.heimu a.extiw,span.heimu a.extiw:visited {
+    color: #252525; 
+}
+
+.heimu,.heimu a,a .heimu,.heimu a.new { 
+    background-color: #252525; 
+    color: #252525; 
+    text-shadow: none; 
+}
+
+body:not(.heimu_toggle_on) .heimu:hover,body:not(.heimu_toggle_on) .heimu:active,body:not(.heimu_toggle_on) .heimu.off { 
+    transition: color .13s linear; 
+    color: #ffffff; 
+}
+
+body:not(.heimu_toggle_on) .heimu:hover a,body:not(.heimu_toggle_on) a:hover .heimu,body:not(.heimu_toggle_on) .heimu.off a,body:not(.heimu_toggle_on) a:hover .heimu.off { 
+    transition: color .13s linear; 
+    color: #add8e6; 
+}
+
+/*以下为提示框效果，建议在<p>标签或<div>标签上使用*/
+.x_border {
+    border-top: 1px solid rgba(226, 226, 226, 0.3); 
+    border-bottom: 1px solid rgba(226, 226, 226, 0.3);
+    border-right: 1px solid rgba(226, 226, 226, 0.3);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    padding: 20px;
+/*Theme Redefine ONLY*/
+    box-shadow: var(--redefine-box-shadow-flat);
+}
+
+.tips_x {
+    border-left:6px solid #21f325;
+    background-color: #ecffeb;
+}
+
+.info_x {
+    border-left:6px solid #2196F3;
+    background-color: #ebffff;
+}
+
+.advice_x {
+    border-left:6px solid #ffab19;
+    background-color: #fff8eb;
+}
+
+.warn_x {
+    border-left:6px solid #f32121;
+    background-color: #ffeeee;
+}
+
+.markdown-body p {
+    margin-bottom: 0.5rem !important;
+    margin-top: 0.5rem !important; 
+}
