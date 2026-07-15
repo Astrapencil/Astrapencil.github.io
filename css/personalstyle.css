@@ -1,5 +1,13 @@
-p {
-    font-family: 'Times New Roman', 'HanYiShuSongYiJian';
+p, div.customize-info.my-1 {
+    font-family: 'Times New Roman', 'HanYiShuSongYiJian', 'SimSun', Geist Variable, Noto Sans SC, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
+}
+
+div.article-content>p {
+    text-indent: 2rem;
+}
+
+p.post-count {
+    font-family: Geist Variable, Noto Sans SC, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
 }
 
 /*下划线动画*/
