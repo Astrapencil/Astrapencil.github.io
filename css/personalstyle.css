@@ -10,6 +10,15 @@ p.post-count {
     font-family: Geist Variable, Noto Sans SC, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
 }
 
+.markdown-body p {
+    margin-bottom: 0.85rem !important;
+}
+
+/*定向公告修改*/
+.home-sidebar-container .sidebar-links .announcement-outside {
+    text-align: left;
+}
+
 /*下划线动画*/
 h3.home-article-title{
     display: inline-block !important;
@@ -87,7 +96,11 @@ body:not(.heimu_toggle_on) .heimu:hover a,body:not(.heimu_toggle_on) a:hover .he
     background-color: #ffeeee;
 }
 
+/*
+
 .markdown-body p {
     margin-bottom: 0.5rem !important;
     margin-top: 0.5rem !important; 
 }
+
+*/
