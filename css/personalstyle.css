@@ -11,12 +11,23 @@ p.post-count {
 }
 
 .markdown-body p {
-    margin-bottom: 0.85rem !important;
+    margin-bottom: .85rem !important;
 }
 
 /*定向公告修改*/
+div.announcement-outside {
+    display: block !important;
+}
+
 .home-sidebar-container .sidebar-links .announcement-outside {
-    text-align: left;
+    text-align: left !important;
+}
+
+.home-sidebar-container .sidebar-links .announcement-outside p {
+    margin: .4rem 0;
+    text-indent: 2rem;
+    text-shadow: 0 0 .5px;
+    padding-inline: 4%;
 }
 
 /*下划线动画*/
