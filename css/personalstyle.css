@@ -1,4 +1,5 @@
-p, div.customize-info.my-1 {
+/*正文字体修改*/
+p:not(.ai-badge), div.customize-info.my-1 {
     font-family: 'Times New Roman', 'HanYiShuSongYiJian', 'SimSun', Geist Variable, Noto Sans SC, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
 }
 
@@ -11,7 +12,8 @@ p.post-count {
 }
 
 .markdown-body p {
-    margin-bottom: .85rem !important;
+    margin-top: .425rem !important;
+    margin-bottom: .425rem !important;
 }
 
 /*定向公告修改*/
@@ -31,12 +33,12 @@ div.announcement-outside {
 }
 
 /*下划线动画*/
-h3.home-article-title{
+h3.home-article-title {
     display: inline-block !important;
     flex: 0 0 auto !important;
 }
 
-h3.home-article-title>a::after{
+h3.home-article-title>a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -49,12 +51,12 @@ h3.home-article-title>a::after{
     transition: transform 0.2s ease;
 }
 
-h3.home-article-title>a:hover::after{
+h3.home-article-title>a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
 }
 
-/*黑幕效果，使用class: heimu;就可以了*/
+/*黑幕效果，类名heimu*/
 span.heimu a.external,span.heimu a.external:visited,span.heimu a.extiw,span.heimu a.extiw:visited {
     color: #252525; 
 }
@@ -75,7 +77,29 @@ body:not(.heimu_toggle_on) .heimu:hover a,body:not(.heimu_toggle_on) a:hover .he
     color: #add8e6; 
 }
 
-/*以下为提示框效果，建议在<p>标签或<div>标签上使用*/
+/*ai小标签*/
+.ai-badge {
+  display: inline-block;
+  background-color: var(--background-color-transparent-15);
+  color: var(--default-text-color);
+  padding: 0.1em 0.6em;
+  margin: 0 0.3em;
+  border-radius: 0.8em;
+  font-size: 0.8em;
+  border: 0 solid var(--color-gray-200, currentcolor);
+  box-shadow: var(--redefine-box-shadow-flat);
+  white-space: nowrap; /* 防止换行 */
+  font-family: 'Geist Mono', Courier, monospace;
+}
+
+.ai-badge i {
+  margin-right: 0.3em;
+  font-family: "Font Awesome 6 Pro";
+  font-style: normal;
+}
+
+/*以下为提示框效果，已弃用*/
+/*
 .x_border {
     border-top: 1px solid rgba(226, 226, 226, 0.3); 
     border-bottom: 1px solid rgba(226, 226, 226, 0.3);
@@ -83,7 +107,7 @@ body:not(.heimu_toggle_on) .heimu:hover a,body:not(.heimu_toggle_on) a:hover .he
     border-radius: 4px;
     margin-bottom: 30px;
     padding: 20px;
-/*Theme Redefine ONLY*/
+
     box-shadow: var(--redefine-box-shadow-flat);
 }
 
@@ -107,7 +131,6 @@ body:not(.heimu_toggle_on) .heimu:hover a,body:not(.heimu_toggle_on) a:hover .he
     background-color: #ffeeee;
 }
 
-/*
 
 .markdown-body p {
     margin-bottom: 0.5rem !important;
