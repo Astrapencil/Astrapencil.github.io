@@ -1,5 +1,48 @@
 @font-face {
     font-family: 'HanYiShuSongYiJIan';
     font-display: swap;
-    src: url(/fonts/HanYiShuSongYiJian-1.ttf);
+    src: url('/fonts/HanYiShuSongYiJian-1.ttf');
+}
+
+@font-face {
+    font-family: 'Bookerly';
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/Bookerly.ttf');
+}
+
+@font-face {
+    font-family: 'Bookerly';
+    font-weight: 400;
+    font-style: italic;
+    src: url('/fonts/Bookerly Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Bookerly';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/fonts/Bookerly Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Bookerly';
+    font-weight: 700;
+    font-style: italic;
+    src: url('/fonts/Bookerly Bold Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Bookerly';
+    font-weight: 300;
+    font-style: normal;
+    src: url('/fonts/Bookerly Light.ttf');
+}
+
+@font-face {
+    font-family: 'Bookerly';
+    font-weight: 300;
+    font-style: italic;
+    src: url('/fonts/Bookerly Light Italic.ttf');
 }

@@ -1,10 +1,15 @@
 /*正文字体修改*/
-p:not(.ai-badge), div.customize-info.my-1 {
-    font-family: 'Times New Roman', 'HanYiShuSongYiJian', 'SimSun', Geist Variable, Noto Sans SC, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
+p:not(.ai-badge), div.article-content ul, div.customize-info.my-1 {
+    font-family: 'Bookerly', 'HanYiShuSongYiJian', 'SimSun', Geist Variable, Noto Sans SC, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
+    vertical-align: baseline;
 }
 
 div.article-content>p {
     text-indent: 2rem;
+}
+
+div.article-content ul {
+    margin-left: 2rem;
 }
 
 p.post-count {
