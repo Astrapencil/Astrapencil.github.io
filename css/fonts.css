@@ -1,16 +1,14 @@
-/*
 @font-face {
     font-family: 'HanYiShuSongYiJIan';
     font-display: swap;
     src: url('/fonts/HanYiShuSongYiJian-1.ttf');
 }
-*/
 
 @font-face {
     font-family: 'SiYuanSongTi';
     font-display: swap;
     font-weight: 400;
-    src: url('/fonts/Bookerly.ttf');
+    src: url('');
 }
 
 @font-face {
@@ -58,7 +56,7 @@
 
 @font-face {
     font-family: 'ZhuDouSans';
-    src: url('fonts/ZhudouSansVF.woff2');
+    src: url('/fonts/ZhudouSansVF.woff2');
     font-weight: 100 900;
     font-style: normal;
 }
