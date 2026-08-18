@@ -1,7 +1,16 @@
+/*
 @font-face {
     font-family: 'HanYiShuSongYiJIan';
     font-display: swap;
     src: url('/fonts/HanYiShuSongYiJian-1.ttf');
+}
+*/
+
+@font-face {
+    font-family: 'SiYuanSongTi';
+    font-display: swap;
+    font-weight: 400;
+    src: url('/fonts/Bookerly.ttf');
 }
 
 @font-face {
@@ -45,4 +54,11 @@
     font-weight: 300;
     font-style: italic;
     src: url('/fonts/Bookerly Light Italic.ttf');
+}
+
+@font-face {
+    font-family: 'ZhuDouSans';
+    src: url('fonts/ZhudouSansVF.woff2');
+    font-weight: 100 900;
+    font-style: normal;
 }

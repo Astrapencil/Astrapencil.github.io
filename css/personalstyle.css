@@ -1,6 +1,6 @@
 /*正文字体修改*/
 p:not(.ai-badge), div.article-content ul, div.customize-info.my-1 {
-    font-family: 'Bookerly', 'HanYiShuSongYiJian', 'SimSun', Geist Variable, Noto Sans SC, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
+    font-family: 'Bookerly', 'SourceHanSerifCN', 'HanYiShuSongYiJian', 'SimSun', Geist Variable, Noto Sans SC, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
     vertical-align: baseline;
 }
 
@@ -17,8 +17,8 @@ p.post-count {
 }
 
 .markdown-body p {
-    margin-top: .425rem !important;
-    margin-bottom: .425rem !important;
+    margin-top: .55rem !important;
+    margin-bottom: .55rem !important;
 }
 
 /*定向公告修改*/
@@ -35,6 +35,14 @@ div.announcement-outside {
     text-indent: 2rem;
     text-shadow: 0 0 .5px;
     padding-inline: 4%;
+}
+
+/*手机头图上部圆角*/
+@media (max-width: 40rem) {
+    .sm\:rounded-t-large {
+            border-top-left-radius: var(--radius-large);
+            border-top-right-radius: var(--radius-large)
+        }
 }
 
 /*下划线动画*/
