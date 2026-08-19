@@ -1,14 +1,7 @@
 @font-face {
-    font-family: 'HanYiShuSongYiJIan';
+    font-family: 'Source Han Serif SC VF';
     font-display: swap;
-    src: url('/fonts/HanYiShuSongYiJian-1.ttf');
-}
-
-@font-face {
-    font-family: 'SiYuanSongTi';
-    font-display: swap;
-    font-weight: 400;
-    src: url('');
+    src: url('/fonts/SourceHanSerifSC-VF-G.ttf');
 }
 
 @font-face {
