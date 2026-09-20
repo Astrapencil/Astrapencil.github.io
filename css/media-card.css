@@ -3,7 +3,11 @@ article.media-card {
     flex-wrap: nowrap;                 /* 始终左右排列，不再换行 */
     align-items: stretch;              /* 高度一致，但图片用 align-self 单独控制 */
     width: 100%;
-    background: #ffffff;
+    /* 用主题变量而不是写死的 #ffffff：
+       浅色模式 --background-color = #fff（与原来的白色一致，视觉零变化），
+       深色模式 = #202124（原来的写死白色会让卡片变成一块刺眼的白板）。
+       这也是主题自己的容器混入 redefine-container 的做法。 */
+    background: var(--background-color);
     border-radius: var(--radius-lg);
     box-shadow: var(--redefine-box-shadow);
     overflow: hidden;
@@ -22,6 +26,15 @@ article.media-card img {
     transition: transform 0.4s ease;
     align-self: center;               /* 垂直居中，消除顶部空隙 */
     object-fit: contain;              /* 确保完整可见，不被裁剪 */
+    /* 给封面勾边：用主题已定义的阴影变量，颜色随明暗模式自动切换
+       （浅色 rgba(0,0,0,.08/.05)，深色 rgba(255,255,255,.08/.05)）。
+
+       这里必须用 drop-shadow 而不是 box-shadow：图片自身有 25px 的 padding，
+       box-shadow 画在 padding 盒之外，会离封面 25px 远，勾不到封面本身的边；
+       drop-shadow 跟随实际绘制出来的像素，正好贴合封面边缘。
+       两个阴影叠加起来等同于主题的 --redefine-box-shadow-flat。 */
+    filter: drop-shadow(0 1px 4px var(--shadow-color-2))
+            drop-shadow(0 0 1px var(--shadow-color-1));
 }
 
 /* ===== 信息容器 ===== */
@@ -30,7 +43,7 @@ article.media-card > div {
     padding: 22px 26px 24px 26px;     /* 保留原有内边距 */
     display: flex;
     flex-direction: column;
-    background: #ffffff;
+    background: var(--background-color);
     min-height: 100px;
 }
 
