@@ -1,0 +1,147 @@
+article.media-card {
+    display: flex;
+    flex-wrap: nowrap;                 /* 始终左右排列，不再换行 */
+    align-items: stretch;              /* 高度一致，但图片用 align-self 单独控制 */
+    width: 100%;
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--redefine-box-shadow);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    font-family: var(--post-font-family);
+    margin-bottom: 36px;
+}
+
+/*===== 封面图片 =====*/
+article.media-card img {
+    flex: 0 0 160px;
+    width: 160px;
+    height: auto;                     /* 高度自适应，保持原始比例 */
+    display: block;
+    padding: 25px 25px;
+    transition: transform 0.4s ease;
+    align-self: center;               /* 垂直居中，消除顶部空隙 */
+    object-fit: contain;              /* 确保完整可见，不被裁剪 */
+}
+
+/* ===== 信息容器 ===== */
+article.media-card > div {
+    flex: 1 1 200px;                  /* 占据剩余空间，最小宽度 200px */
+    padding: 22px 26px 24px 26px;     /* 保留原有内边距 */
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    min-height: 100px;
+}
+
+/* ===== 书名 ===== */
+article.media-card p.media-name {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+
+/* ===== 作者 ===== */
+article.media-card p.media-author {
+    font-size: 15px;
+    color: #8a7a6e;
+    margin-bottom: 2px;               /* 与译者紧挨 */
+    letter-spacing: 0.3px;
+}
+
+/* ===== 译者 ===== */
+article.media-card p.media-translator {
+    font-size: 15px;
+    color: #8a7a6e;
+    margin-bottom: 2px;              /* 与评分区拉开距离 */
+    letter-spacing: 0.3px;
+}
+
+/* ===== 评分 & 来源（置于译者下方） ===== */
+article.media-card .media-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* ===== 评分 ===== */
+article.media-card .media-meta span:first-of-type {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d4a24c;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+article.media-card .media-meta span:first-of-type::before {
+    content: "★";
+    font-size: 25px;
+    line-height: 20px;
+    color: #d4a24c;
+}
+
+/* ===== 来源（评价数） ===== */
+article.media-card .media-meta span:last-of-type {
+    font-size: 14px;
+    color: #a09084;
+    letter-spacing: 0.2px;
+}
+
+/* ===== 按钮控件（占满信息栏宽度） ===== */
+article.media-card a.button {
+    width: 100%;
+    justify-content: flex-end;        /* 宽屏时右对齐（可自行调整） */
+}
+
+/* ========================================
+   窄屏响应式（≤768px）—— 封面缩小，左右布局保持
+   ======================================== */
+@media (max-width: 768px) {
+    article.media-card {
+        border-radius: var(--radius-md);
+    }
+
+    article.media-card.media-card img {
+        flex: 0 0 110px;
+        width: 110px;
+        height: auto;
+        padding: 15px 12px 15px 15px;   /* 适当缩小内边距，保持美观 */
+        align-self: center;
+        max-height: none;               /* 取消原 max-height 限制 */
+        object-fit: contain;
+    }
+
+    /* 信息容器内边距稍减 */
+    article.media-card > div {
+        padding: 18px 20px 18px 12px;
+        min-height: auto;
+    }
+
+    /* 书名略小 */
+    article.media-card p.media-name {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    article.media-card p.media-author, article.media-card p.media-translator {
+        font-size: 14px;
+    }
+
+    /* 评分字体略小 */
+    article.media-card .media-meta span:first-of-type {
+        font-size: 16px;
+    }
+    article.media-card .media-meta span:last-of-type {
+        font-size: 12px;
+    }
+
+    /* 按钮占满信息栏宽度（信息栏已占满剩余空间） */
+    article.media-card a.button {
+        width: 100%;
+        justify-content: flex-end;      /* 仍可右对齐，但占满宽度 */
+    }
+}
